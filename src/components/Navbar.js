@@ -57,9 +57,6 @@ const NavBarContainer = styled.div`
       margin: 5px;
       padding: 4px;
     }
-
-
-
   }
 
 `;

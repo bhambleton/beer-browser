@@ -18,15 +18,54 @@ export const API_KEY = '8402f8e76fa6df98996cf0f743d5cd9e';
 export const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://sandbox-api.brewerydb.com/v2/';
 
 const FooterContainer = styled.div`
-  position: relative;
-  margin-top: 25px;
-  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 15px 0px;
 
   span {
     font-family: 'Raleway', sans-serif;
-    font-size: 10px;
+    font-size: 14px;
   }
 `;
+
+const ErrorContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  color: steelblue;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+      font-size: 102px;
+      margin: 0;
+  }
+
+  span {
+    font-size: 24px;
+  }
+`;
+
+function Error404() {
+
+  return (
+    <ErrorContainer>
+      <div>
+        <h1>404</h1>
+        <span>Beer not Found</span>
+      </div>
+    </ErrorContainer>
+);
+}
 
 function Footer() {
   return (
@@ -61,11 +100,11 @@ function App() {
         <Route path="/random">
           <Random />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Home />
         </Route>
         <Route path="*">
-          <h1>404</h1>
+          <Error404 />
         </Route>
       </Switch>
       <Footer />

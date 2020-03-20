@@ -45,9 +45,7 @@ const StylePageContainer = styled.div`
   align-items: center;
 
   h1 {
-    position: absolute;
-    left: 45%;
-    top: 50%;
+    align-self: center;
   }
 `;
 

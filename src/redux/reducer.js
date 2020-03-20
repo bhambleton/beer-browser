@@ -2,7 +2,9 @@ import { combineReducers } from 'redux';
 
 import {
   RECEIVE_BEERS,
-  RECEIVE_STYLES
+  RECEIVE_STYLES,
+  RECEIVE_YEAST,
+  RECEIVE_MALTS
 } from './actions';
 
 function beersReducer(state = [], action) {
@@ -29,8 +31,25 @@ function stylesReducer(state = [], action) {
   }
 }
 
-function ingredientsReducer(state = { hops: [], malts: [], yeasts: [], misc: [] }, action) {
+function maltsReducer(state = [], action) {
   switch (action.type) {
+    case RECEIVE_MALTS:
+      return [
+        ...state,
+        ...action.malts
+      ];
+    default:
+      return state;
+  }
+}
+
+function yeastReducer(state = [], action) {
+  switch (action.type) {
+    case RECEIVE_YEAST:
+      return [
+        ...state,
+        ...action.yeast
+      ];
     default:
       return state;
   }
@@ -39,7 +58,8 @@ function ingredientsReducer(state = { hops: [], malts: [], yeasts: [], misc: [] 
 const rootReducer = combineReducers({
   beers: beersReducer,
   styles: stylesReducer,
-  ingredients: ingredientsReducer
+  yeast: yeastReducer,
+  malts: maltsReducer
 });
 
 export default rootReducer;
