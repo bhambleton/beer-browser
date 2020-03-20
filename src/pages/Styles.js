@@ -42,10 +42,10 @@ const StylePageContainer = styled.div`
   display: flex;
   width: 100%;
   margin: 0 auto;
-  align-items: center;
 
   h1 {
-    align-self: center;
+    position: absolute;
+    left: 45%;
   }
 `;
 
@@ -168,7 +168,7 @@ function Styles() {
       <h1>Styles</h1>
       <StylePageContainer>
         {loading ? (
-          <h1>Loading</h1>
+          <h1>Loading...</h1>
         ) : (
           <StyleList array={styleList}/>
         )}

@@ -10,10 +10,13 @@ const PageContainer = styled.div`
   border-bottom: 8px groove #FFF;
   background-color: #ffe49f;
 
+  h1 {
+    color: steelblue;
+  }
+
   h1:first-of-type {
     font-family: 'Overlock', sans-serif;
     margin: 8px 0px;
-    color: steelblue;
     font-size: 34px;
   }
 

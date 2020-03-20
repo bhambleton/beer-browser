@@ -19,7 +19,7 @@ h1:first-of-type {
   font-family: 'Overlock', sans-serif;
   margin: 4px 0px;
   color: steelblue;
-  font-size: 64px;
+  font-size: 72px;
 }
 `;
 
@@ -28,6 +28,11 @@ const PageTitle = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 6em;
+
+  span {
+    font-family: 'Raleway', sans-serif;
+    color: steelblue;
+  }
 `;
 
 const HomeItemContainer = styled.div`
