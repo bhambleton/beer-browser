@@ -14,7 +14,7 @@ import Home from './pages/Home';
 // COMPONENTS
 import Header from './components/Header';
 
-export const API_KEY = /* Insert Key */
+export const API_KEY = '8402f8e76fa6df98996cf0f743d5cd9e';
 export const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://sandbox-api.brewerydb.com/v2/';
 
 const FooterContainer = styled.div`
